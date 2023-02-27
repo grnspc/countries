@@ -1,0 +1,74 @@
+{
+  "name": "grnspc/countries",
+  "description": "Countries is a simple and lightweight package for retrieving country details with flexibility. A whole bunch of data including name, demonym, capital, iso codes, dialling codes, geo data, currencies, flags, emoji, and other attributes for all 250 countries worldwide at your fingertips.",
+  "type": "library",
+  "keywords": [
+    "flags",
+    "country",
+    "flexible",
+    "countries",
+    "currencies",
+    "geographic",
+    "languages",
+    "dialling",
+    "demonym",
+    "simple",
+    "emoji",
+    "svg"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "GrnSpc",
+      "email": "help@grnspc.com"
+    },
+    {
+      "name": "Rinvex LLC",
+      "homepage": "https://rinvex.com",
+      "email": "help@rinvex.com"
+    }
+  ],
+  "require": {
+    "php": "^8.1.0"
+  },
+  "require-dev": {
+    "laravel/pint": "^1.6",
+    "pestphp/pest": "2.x-dev",
+    "phpstan/phpstan": "^1.10"
+  },
+  "autoload": {
+    "files": [
+      "src/helpers.php"
+    ],
+    "psr-4": {
+      "Grnspc\\Country\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Grnspc\\Country\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/pest",
+    "pint": "vendor/bin/pint",
+    "phpstan": "vendor/bin/phpstan analyse"
+  },
+  "config": {
+    "sort-packages": true,
+    "preferred-install": "dist",
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Grnspc\\Country\\CountryServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
